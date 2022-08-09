@@ -5,15 +5,21 @@
         <link rel="stylesheet" href="./stylesheets/main.css">
         <link rel="stylesheet" href="./stylesheets/index.css">
         <link rel="icon", href="https://avatars.githubusercontent.com/u/83887130?v=4">
-        <title>iKingNinja</title>
+        <title>iKingNinja | Home</title>
         <meta name="description" content="iKingNinja's personal website.">
         <!-- Discord embed metadata-->
         <meta content="iKingNinja's website" property="og:title" />
         <meta content="iKingNinja's personal website" property="og:description" />
-        <meta content="http://127.0.0.1:5500/index.html" property="og:url" />
+        <meta content="https://ikingninja.github.io/index.html" property="og:url" />
         <meta content="https://avatars.githubusercontent.com/u/83887130?v=4" property="og:image" />
     </head>
     <body>
+        <div class="topbarFrame">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+            </ul>
+        </div>
         <img class="accountImage" src="https://avatars.githubusercontent.com/u/83887130?v=4">
         <h1 style="text-align: center;">iKingNinja</h1>
         <br>
@@ -41,6 +47,7 @@
                     <i>Anvil is a Windows application designed to make customizing the Roblox Client and Studio faster.</i>
                     <p></p>
                     <iframe class="youtubePlayer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/0bHT_HpPfbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button id="downloadAnvil">Download installer (<span style="text-transform: lowercase;">x</span>64)</button>
                 </div>
                 <br>
                 <h3>BloxTeams - Web developer [Team project]</h3>
@@ -65,6 +72,8 @@
         </div>
     </body>
     <script>
+        const downloadAnvil = document.getElementById('downloadAnvil');
+
         document.getElementById('yearsRobloxDev').innerText = parseInt(new Date().getFullYear() - 2020);
 
         const yearsWebDev = parseInt(new Date().getFullYear() - 2021);
@@ -74,5 +83,9 @@
         } else {
             document.getElementById('yearsWebDev').innerText = `${yearsWebDev} years`;
         }
+
+        downloadAnvil.addEventListener('click', function() {
+            window.open('/resources/Anvil_Setup.msi');
+        })
     </script>
 </html>

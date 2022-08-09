@@ -1,0 +1,32 @@
+.cardsContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.cardsContainer div {
+    width: 20rem;
+    height: 10rem;
+    background-color: #141414;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cardsContainer div:hover {
+    background-color: black;
+    transition: 0.3s;
+}
+
+.cardsContainer div p {
+    font-size: 25px;
+}
