@@ -1,1 +1,72 @@
-<p>test</p>
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="./stylesheets/main.css">
+        <link rel="stylesheet" href="./stylesheets/index.css">
+        <link rel="icon", href="https://avatars.githubusercontent.com/u/83887130?v=4">
+        <title>iKingNinja</title>
+    </head>
+    <body>
+        <img class="accountImage" src="https://avatars.githubusercontent.com/u/83887130?v=4">
+        <h1 style="text-align: center;">iKingNinja</h1>
+        <br>
+        <div class="pageContent">
+            <p>
+                I am iKingNinja, a developer on Roblox but a web and native developer as well.
+            </p>
+            <p>
+                I have been developing on Roblox for <span id="yearsRobloxDev"></span>
+                years, I have been a web developer for <span id="yearsWebDev"></span> and I recently started developing native
+                applications in C# using the .NET Framework.
+            </p>
+            <p>
+                As a web developer I mainly focus on back-end development, though I have understanding of front-end development.
+            </p>
+            <p>
+                I am currently mastering JavaScript while also learning other languages such as C# and C++.
+            </p>
+            <br>
+            <h1 style="text-align: center;">Showcase</h1>
+            <br>
+            <div class="showcaseContainer">
+                <div class="youtubePlayerWrapper">
+                    <h3>Anvil - Native developer</h3>
+                    <i>Anvil is a Windows application designed to make customizing the Roblox Client and Studio faster.</i>
+                    <p></p>
+                    <iframe class="youtubePlayer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/0bHT_HpPfbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br>
+                <h3>BloxTeams - Web developer [Team project]</h3>
+                <i>BloxTeams is a platform that will allow Roblox developers to engage in secure commissions.</i><br>
+                <p></p>
+                <a href="https://devforum.roblox.com/t/bloxteams-powering-secure-commissions/1881932">DevForum Post</a>
+                <br>
+                <h3>Accounts manager - Web developer</h3>
+                <i>
+                    Accounts manager is a browser extension for Roblox that allows you to keep multiple accounts connected at the same
+                    time.
+                </i>
+                <p></p>
+                <a href="https://devforum.roblox.com/t/accounts-manager-open-source-extension/1781482">DevForum Post</a><br>
+                <a href="https://github.com/iKingNinja/Accounts-manager">GitHub Repository</a>
+            </div>
+            <br>
+            <h1 style="text-align: center;">Contact</h1>
+            <p>
+                The best way to contact me is through DevForum PMs.
+            </p>
+        </div>
+    </body>
+    <script>
+        document.getElementById('yearsRobloxDev').innerText = parseInt(new Date().getFullYear() - 2020);
+
+        const yearsWebDev = parseInt(new Date().getFullYear() - 2021);
+
+        if (yearsWebDev < 2) {
+            document.getElementById('yearsWebDev').innerText = `${yearsWebDev} year`;
+        } else {
+            document.getElementById('yearsWebDev').innerText = `${yearsWebDev} years`;
+        }
+    </script>
+</html>
