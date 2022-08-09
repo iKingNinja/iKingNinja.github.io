@@ -73,6 +73,10 @@ button:hover {
     margin-bottom: 5rem;
 }
 
+.pageContent h1 {
+    text-align: center;
+}
+
 .pageContent p {
     text-align: center;
 }
