@@ -64,6 +64,12 @@ button:hover {
 
 .topbarFrame ul li a {
     color: gray;
+    transition: 0.3s;
+}
+
+.topbarFrame ul li a:hover {
+    color: white;
+    transition: 0.3s;
 }
 
 .pageContent {
