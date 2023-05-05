@@ -1,14 +1,45 @@
-.accountImage {
+.account-image {
     width: 15rem;
     border-radius: 100%;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
 }
 
-.showcaseContainer {
-    width: 560px;
-    height: fit-content;
-    margin: 0 auto;
+.progress-list label {
+    margin-bottom: 0.5em;
+}
+
+.progress-list progress {
+    margin-bottom: 1em;
+}
+
+progress {
+    border: none;
+    height: 0.5em;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 0px;
+    border-radius: 10px 0 0 10px;
+}
+
+.javascript-progress::-webkit-progress-value {
+    background-color: yellow;
+}
+
+.lua-progress::-webkit-progress-value {
+    background-color: blue;
+}
+
+.typescript-progress::-webkit-progress-value {
+    background-color: royalblue;
+}
+
+.cs-progress::-webkit-progress-value {
+    background-color: green;
 }

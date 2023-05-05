@@ -7,7 +7,11 @@
         <link rel="icon", href="https://avatars.githubusercontent.com/u/83887130?v=4">
         <title>iKingNinja | Anvil</title>
         <meta name="description" content="iKingNinja's personal website.">
-        <!-- Discord embed metadata-->
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Embed metadata-->
         <meta content="Anvil" property="og:title" />
         <meta content="Application to customize your Roblox Client and Studio" property="og:description" />
         <meta content="https://ikingninja.github.io/projects/anvil.html" property="og:url" />
@@ -15,32 +19,55 @@
     </head>
     <body>
         <div class="topbarFrame">
+            <div class="topbarFrame-box">
+                <span class="material-icons-round md-white md-48 menu-button" id="menu-button">menu</span>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="/projects.html">Projects</a></li>
             </ul>
         </div>
-        <h1 style="text-align: center; margin-top: 2rem;">Anvil</h1>
-        <br>
-        <div class="pageContent">
-            <p>
-                Anvil is an application made in C# using the .NET Framework. Anvil will make customizing your Roblox Client and Studio
-                a lot less annoying as it will automatically change files for you when Roblox updates. You just have to select the
-                files that you want Anvil to replace Roblox’s with.
-            </p>
-            <p>
-                Anvil was developed following a scheme to be as fast as possible and to complete all the tasks before the game
-                launches. Anvil runs parallel threads which means that all the tasks will be executed simultaneously.
-            </p>
-            <p>
-                Anvil lets you customize the cursor, the death sound and even class images for Roblox Studio so that if you want to use
-                Vanilla you don’t have to manually change the file every time Roblox Studio updates.
-            </p>
-            <h1>Showcase</h1>
-            <div class="youtubePlayerWrapper">
-                <iframe class="youtubePlayer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/0bHT_HpPfbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <button id="downloadAnvil" onclick="window.open('/resources/Anvil_Setup.msi')">Download installer (<span style="text-transform: lowercase;">x</span>64)</button>
+        <div class="body-box">
+            <h1>Anvil</h1>
+            
+            <div class="body-box" style="width: 50%;">
+                <div class="banner-wrapper warning-wrapper">
+                    <h3>Warning</h3>
+                    <p>
+                        Anvil has not been tested with the new 64-bit Roblox client and it is unknown if it is compatible with
+                        Hyperion.
+                    </p>
+                </div>
+                <p>
+                    Anvil is an application made in C# using the .NET Framework. Anvil will make customizing your Roblox Client and Studio
+                    a lot less annoying as it will automatically change files for you when Roblox updates. You just have to select the
+                    files that you want Anvil to replace Roblox's with.
+                </p>
+                <br>
+                <p>
+                    Anvil was developed following a scheme to be as fast as possible and to complete all the tasks before the game
+                    launches. Anvil runs parallel threads which means that all the tasks will be executed simultaneously.
+                </p>
+                <br>
+                <p>
+                    Anvil lets you customize the cursor, the death sound and even class images for Roblox Studio so that if you want to use
+                    Vanilla you don't have to manually change the file every time Roblox Studio updates.
+                </p>
+
+                <h2>Showcase</h2>
+                <div class="body-box">
+                    <iframe class="youtube-player" src="https://www.youtube-nocookie.com/embed/0bHT_HpPfbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <button style="margin-top: 2em;" id="downloadAnvil" onclick="window.open('/resources/Anvil_Setup.msi')">Download installer (<span style="text-transform: lowercase;">x</span>64)</button>
+                </div>
             </div>
+            <div class="bottom-space"></div>
         </div>
     </body>
+    <script src="../scripts/siderbar.js"></script>
 </html>

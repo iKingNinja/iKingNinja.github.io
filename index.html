@@ -6,8 +6,12 @@
         <link rel="stylesheet" href="./stylesheets/index.css">
         <link rel="icon", href="https://avatars.githubusercontent.com/u/83887130?v=4">
         <title>iKingNinja | Home</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Embed metadata-->
         <meta name="description" content="iKingNinja's personal website.">
-        <!-- Discord embed metadata-->
         <meta content="iKingNinja's website" property="og:title" />
         <meta content="iKingNinja's personal website" property="og:description" />
         <meta content="https://ikingninja.github.io/index.html" property="og:url" />
@@ -15,89 +19,76 @@
     </head>
     <body>
         <div class="topbarFrame">
+            <div class="topbarFrame-box">
+                <span class="material-icons-round md-white md-48 menu-button" id="menu-button">menu</span>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="/projects.html">Projects</a></li>
             </ul>
         </div>
-        <img class="accountImage" src="https://avatars.githubusercontent.com/u/83887130?v=4">
-        <h1 style="text-align: center;">iKingNinja</h1>
-        <br>
-        <div class="pageContent">
-            <p>
-                I am iKingNinja, a developer on Roblox but a web and native developer as well.
-            </p>
-            <p>
-                I have been developing on Roblox for <span id="yearsRobloxDev"></span>
-                years, I have been a web developer for <span id="yearsWebDev"></span> and I recently started developing native
-                applications in C# using the .NET Framework.
-            </p>
-            <p>
-                As a web developer I mainly focus on back-end development, though I have understanding of front-end development.
-            </p>
-            <p>
-                I am currently mastering JavaScript while also learning other languages such as C# and C++.
-            </p>
-            <br>
-            <h1>Showcase</h1>
-            <br>
-            <div class="showcaseContainer">
-                <div class="youtubePlayerWrapper">
-                    <h3>Anvil - Native developer</h3>
-                    <i>Anvil is a Windows application designed to make customizing the Roblox Client and Studio faster.</i>
-                    <p></p>
-                    <iframe class="youtubePlayer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/0bHT_HpPfbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <button id="downloadAnvil">Download installer (<span style="text-transform: lowercase;">x</span>64)</button>
-                </div>
+        <div class="body-box">
+            <div class="body-box" style="width: 50%;">
+                <img src="https://avatars.githubusercontent.com/u/83887130?v=4" alt="iKingNinja Profile Picture" class="account-image">
+                <h1>iKingNinja</h1>
+                
+                <p>
+                    I am iKingNinja, a software engineer and also a game developer on Roblox.
+                </p>
+                <p>
+                    I have experience working with different programming languages including JavaScript, TypeScript, C# and Luau.
+                </p>
                 <br>
-                <h3>BloxTeams - Web developer [Team project]</h3>
-                <i>BloxTeams is a platform that will allow Roblox developers to engage in secure commissions.</i><br>
-                <p></p>
-                <a href="https://devforum.roblox.com/t/bloxteams-powering-secure-commissions/1881932">DevForum Post</a>
-                <br>
-                <div class="youtubePlayerWrapper">
-                    <h3>Accounts manager - Web developer</h3>
-                    <i>
-                        Accounts manager is a browser extension for Roblox that allows you to keep multiple accounts connected at the same
-                        time.
-                    </i>
-                    <p></p>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4CY1ymEBWMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <button id="downloadAnvil" onclick="window.open('https://github.com/iKingNinja/Accounts-manager/releases')">Download</button>
-                    <p></p>
-                    <a href="https://devforum.roblox.com/t/accounts-manager-open-source-extension/1781482">DevForum Post</a><br>
-                    <a href="https://github.com/iKingNinja/Accounts-manager">GitHub Repository</a>
+                <p>
+                    I joined Roblox in 2020 and initially got interested in game development, later in november i started
+                    developing Discord bots and from there my Web development journey began.
+                </p>
+
+                <h3>Competences</h3>
+                <div class="body-box progress-list">
+                    <label for="javascript-progress">JavaScript</label>
+                    <progress class="javascript-progress" id="javascript-progress" value="90" max="100"></progress>
+                    <label for="lua-progress">Lua</label>
+                    <progress class="lua-progress" id="lua-progress" value="85" max="100"></progress>
+                    <label for="typescript-progress">TypeScript</label>
+                    <progress class="typescript-progress" id="typescript-progress" value="75" max="100"></progress>
+                    <label for="cs-progresss">C#</label>
+                    <progress class="cs-progress" id="cs-progress" value="40" max="100"></progress>
                 </div>
+
+                <p>
+                    In the field on web development I am mainly a back-end developer and specialise in building REST APIs with
+                    frameworks like express.js for JavaScript and ASP.NET / ASP.NET Core for C#.
+                </p>
+
+                <h3>Past work</h3>
+                <p>
+                    You can view my past work and current projects <a href="/projects.html">here</a> or on <a href="https://github.com/iKingNinja">GitHub</a>.
+                </p>
                 <br>
-                <div class="youtubePlayerWrapper">
-                    <h3>Roblox UIs converter - Web developer</h3>
-                    <i>This tool turns Roblox UIs into .png files generated using canvases.</i>
-                    <p></p>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KXqCnWaan1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                <p>
+                    The biggest project I have been working on is <a href="https://bloxteams.com">BloxTeams</a>.
+                </p>
+                <p>
+                    I learned a lot working on BloxTeams and I considerably improved my programming skills while developing it.
+                    I am also one of its co-founders and work as a back-end developer for it.
+                </p>
+
+                <h3>Contact</h3>
+                <p>
+                    I tend to keep my Discord tag private as I only accept Direct Messages from servers I am a member of. The
+                    best way to contact me is through DevForum Private Messages. You can find my DevForum profile
+                    <a href="https://devforum.roblox.com/u/NinjaFurfante07">here</a>.
+                </p>
             </div>
-            <br>
-            <h1>Contact</h1>
-            <p>
-                The best way to contact me is through DevForum PMs.
-            </p>
+            <div class="bottom-space"></div>
         </div>
     </body>
-    <script>
-        const downloadAnvil = document.getElementById('downloadAnvil');
-
-        document.getElementById('yearsRobloxDev').innerText = parseInt(new Date().getFullYear() - 2020);
-
-        const yearsWebDev = parseInt(new Date().getFullYear() - 2021);
-
-        if (yearsWebDev < 2) {
-            document.getElementById('yearsWebDev').innerText = `${yearsWebDev} year`;
-        } else {
-            document.getElementById('yearsWebDev').innerText = `${yearsWebDev} years`;
-        }
-
-        downloadAnvil.addEventListener('click', function() {
-            window.open('/resources/Anvil_Setup.msi');
-        })
-    </script>
+    <script src="./scripts/siderbar.js"></script>
 </html>

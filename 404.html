@@ -7,18 +7,31 @@
         <link rel="icon" href="https://avatars.githubusercontent.com/u/83887130?v=4">
         <title>iKingNinja | Home</title>
         <meta name="description" content="iKingNinja's personal website.">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="topbarFrame">
+            <div class="topbarFrame-box">
+                <span class="material-icons-round md-white md-48 menu-button" id="menu-button">menu</span>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="/projects.html">Projects</a></li>
             </ul>
         </div>
-        <div class="pageContent">
+        <div class="body-box">
             <h1 style="text-align: center; margin-top: 10rem;">404 | Not found</h1>
             <p style="text-align: center;">The page that you were looking for was not found.</p>
             <p style="text-align: center;"><a href="/">Go home</a></p>
         </div>
     </body>
+    <script src="./scripts/siderbar.js"></script>
 </html>

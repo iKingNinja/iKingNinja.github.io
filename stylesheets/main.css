@@ -1,44 +1,37 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background-color: rgb(26, 24, 24);
 }
 
-p {
-    font-size: 19px;
+body::-webkit-scrollbar {
+    display: none;
 }
 
-p, h1, h3, i {
+body > .body-box {
+    position: relative;
+    top: 5em;
+    margin-bottom: 2em;
+}
+
+h1, h2, h3, h4, p, a, label {
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+p {
+    color: white;
+    line-height: 1.5em;
+    margin: 0;
+    text-align: center;
+}
+
 a {
     color: royalblue;
-    font-size: 19px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
-}
-
-button {
-	border: none;
-	cursor: pointer;
-	color: #171717;
-	background-color: #2BB1FF;
-	padding: 6px 16px;
-	font-size: 16px;
-	min-width: 64px;
-    width: 100%;
-    margin-top: 2rem;
-	font-style: normal;
-	font-family: 'Gotham Screen Smart', Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-	line-height: 24px;
-	border-radius: 4px;
-	text-transform: uppercase;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: rgb(43, 177, 255, 0.8);
-    transition: 0.3s;
 }
 
 .topbarFrame {
@@ -46,25 +39,38 @@ button:hover {
     width: 101%;
     height: 5rem;
     margin: -0.5rem;
+    position: fixed;
+    z-index: 1;
+}
+
+.topbarFrame-box {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
+    margin-right: 1em;
+}
+
+.topbarFrame-box .menu-button {
+    display: none;
+    cursor: pointer;
 }
 
 .topbarFrame ul {
     list-style: none;
-    float: right;
     margin-right: 1rem;
-    vertical-align: middle;
     display: table-cell;
 }
 
 .topbarFrame ul li {
     display: inline-block;
-    margin-top: 0.5rem;
     margin-left: 1rem;
 }
 
 .topbarFrame ul li a {
     color: gray;
     transition: 0.3s;
+    font-size: 19px;
 }
 
 .topbarFrame ul li a:hover {
@@ -72,33 +78,116 @@ button:hover {
     transition: 0.3s;
 }
 
-.pageContent {
-    margin: 0 auto;
-    width: 70%;
-    height: fit-content;
-    margin-bottom: 5rem;
-}
-
-.pageContent h1 {
+.sidebar {
+    background-color: #141414;
+    margin: -0.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 7rem);
+    bottom: 0;
+    padding: 1em;
     text-align: center;
+    position: fixed;
+    z-index: 1;
+    transform: translateX(100%);
 }
 
-.pageContent p {
-    text-align: center;
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.youtubePlayerWrapper {
+.sidebar ul li {
+    padding: 0.5em;
+    font-size: 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+}
+
+.body-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.youtube-player {
     width: 560px;
+    height: 315px;
+}
+
+.material-icons-round.md-white {
+    color: white;
+}
+
+.material-icons-round.md-48 {
+    font-size: 48px;
+}
+
+.banner-wrapper {
+    background-color: #090909;
+    width: 100%;
+    padding: 1em;
     height: fit-content;
-    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 2em;
 }
 
-i {
-    color: gray;
+.banner-wrapper h3 {
+    margin: 0;
 }
 
-.youtubePlayerWrapper .youtubePlayer {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+.banner-wrapper p {
+    text-align: left;
+}
+
+.info-wrapper {
+    border-left: royalblue solid 0.5em;
+}
+
+.warning-wrapper {
+    border-left: orange solid 0.5em;
+}
+
+.danger-wrapper {
+    border-left: red solid 0.5em;
+}
+
+.bottom-space {
+    width: 0px;
+    height: 50px;
+}
+
+@media (max-width: 480px) {
+    body > .body-box {
+        top: 7em;
+    }
+    .topbarFrame {
+        background-color: #141414;
+        height: 7rem;
+    }
+
+    .topbarFrame ul {
+        display: none;
+    }
+
+    .topbarFrame-box .menu-button {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .sidebar {
+        display: flex;
+    }
+
+    .youtube-player {
+        width: 450px;
+        height: 250px;
+    }
 }
