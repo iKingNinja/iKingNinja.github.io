@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../stylesheets/main.css">
+        <link rel="stylesheet" href="../../stylesheets/projects.css">
+        <link rel="icon", href="https://avatars.githubusercontent.com/u/83887130?v=4">
+        <title>iKingNinja | Accounts manager</title>
+        <meta name="description" content="iKingNinja's personal website.">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Embed metadata-->
+        <meta content="blox-auth" property="og:title" />
+        <meta content="The library for fast to develop Roblox OAuth2.0 flows" property="og:description" />
+        <meta content="https://ikingninja.github.io/projects/accounts-manager.html" property="og:url" />
+        <meta content="https://avatars.githubusercontent.com/u/83887130?v=4" property="og:image" />
+    </head>
+    <body>
+        <div class="topbarFrame">
+            <div class="topbarFrame-box">
+                <span class="material-icons-round md-white md-48 menu-button" id="menu-button">menu</span>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+            </ul>
+        </div>
+        <div class="body-box">
+            <h1 style="text-align: center; margin-top: 2rem;">Accounts manager</h1>
+            
+            <div class="banner-wrapper info-wrapper" style="width: 50%;">
+                <h3>Info</h3>
+                <p>
+                    This page has the sole aim to give some background on blox-auth, the official page for technical details
+                    and updates can be found <a href="https://github.com/bloxteams/blox-auth">here</a>.
+                </p>
+            </div>
+            <div class="body-box" style="width: 50%;">
+                <p>
+                    When Roblox OAuth2.0 first came out I had the luck to get early access to it and immediately started
+                    implementing it into BloxTeams. I never liked the process of writing controllers for OAuth flows so I
+                    eventually decided it was a good idea to develop a library to fasten that process. In fact blox-auth
+                    reduces long controllers in just a few lines thanks to the <code>authorize</code> and
+                    <code>getToken</code> middlewares saving you from writing all the necessary HTTP requests. 
+                </p><br>
+                <p>
+                    It was originally only compatible with JavaScript but thanks to a community member's contribution it is now
+                    also compatible with TypeScript with the release of v1.1.0.
+                </p>
+            </div>
+            <div class="bottom-space"></div>
+        </div>
+    </body>
+    <script src="../../scripts/siderbar.js"></script>
+</html>
