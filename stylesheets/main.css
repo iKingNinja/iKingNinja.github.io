@@ -33,6 +33,10 @@ a {
     text-decoration: none;
 }
 
+.donate {
+    color: gold !important;
+}
+
 code {
     background-color: rgb(41, 41, 41);
     padding: 0.5em;
